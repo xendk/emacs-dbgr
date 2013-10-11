@@ -112,6 +112,7 @@
      "./realgud/debugger/trepan.pl/trepanpl"
      "./realgud/debugger/trepanx/trepanx"
      "./realgud/debugger/trepan8/trepan8"
+     "./realgud/debugger/xdebug/xdebug"
      "./realgud/debugger/zshdb/zshdb"
      ) "realgud-")
   )
