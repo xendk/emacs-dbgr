@@ -46,7 +46,7 @@ described by PT."
 )
 
 (define-minor-mode xdebug-track-mode
-<  "Minor mode for tracking xdebug debugging inside a process shell."
+  "Minor mode for tracking xdebug debugging inside a process shell."
   :init-value nil
   ;; :lighter " xdebug"   ;; mode-line indicator from realgud-track is sufficient.
   ;; The minor mode bindings.
