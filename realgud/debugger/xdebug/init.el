@@ -56,16 +56,13 @@ realgud-loc-pat struct")
 
 ;; Regular expression that describes a "breakpoint set" line.
 ;; For example:
-;;   Breakpoint 1 set at VM offset 2 of instruction sequence "require",
-;;	line 29 in file <internal:lib/rubygems/custom_require>.
-;;   Breakpoint 2 set at VM offset 29 of instruction sequence "<top /xx.rb>",
-;;	line 64 in file /src/external-vcs/linecache/trunk/lib/linecache.rb.
-;; (setf (gethash "brkpt-set" realgud-trepan-pat-hash)
-;;       (make-realgud-loc-pat
-;;        :regexp "^Breakpoint \\([0-9]+\\) set at .*[\n\t ]+line \\([0-9]+\\)[ \t\n]+in file \\(.+\\)."
-;;        :num 1
-;;        :file-group 3
-;;        :line-group 2))
+;;   Breakpoint set at line 12 in /var/www/index.php
+(setf (gethash "brkpt-set" realgud-xdebug-pat-hash)
+      (make-realgud-loc-pat
+       :regexp "\nBreakpoint set at line \\([0-9]+\\) in file \\(.+\\)\n"
+       ; :num 1
+       :file-group 2
+       :line-group 1))
 
 ;; Regular expression that describes a debugger "delete" (breakpoint) response.
 ;; For example:
