@@ -29,8 +29,6 @@ described by PT."
   (interactive "d")
   (realgud-goto-line-for-pt pt "syntax-error"))
 
-(realgud-ruby-populate-command-keys xdebug-track-mode-map)
-
 (define-key xdebug-track-mode-map
   (kbd "C-c !c") 'realgud-xdebug-goto-control-frame-line)
 (define-key xdebug-track-mode-map
