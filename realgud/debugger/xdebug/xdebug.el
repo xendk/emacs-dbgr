@@ -18,8 +18,7 @@
 ;;
 
 (defcustom xdebug-command-name
-  ;;"xdebug --emacs 3"
-  "/home/xen/dev/xdebugclient/xdebugclient"
+  "xdebugclient"
   "File name for executing the XDebug client script and command options.
 This should be an executable on your path, or an absolute file name."
   :type 'string

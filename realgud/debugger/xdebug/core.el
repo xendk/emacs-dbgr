@@ -57,14 +57,14 @@ NOTE: the above should have each item listed in quotes.
 
   ;; Parse the following kind of pattern:
   ;;  [ruby ruby-options] trepan trepan-options script-name script-options
-  (list '("/usr/bin/php") '("/home/xen/dev/xdebugclient/xdebugclient") '("index.php") nil)
+  (list '("xdebugclient") '("index.php") nil)
   )
 
 (defvar xdebug-command-name) ; # To silence Warning: reference to free variable
 (defun xdebug-suggest-invocation (debugger-name)
   "Suggest a xdebug command invocation via `realgud-suggest-invocaton'"
   (realgud-suggest-invocation xdebug-command-name xdebug-minibuffer-history
-                           "php" "\\.php$" "/home/xen/dev/xdebugclient/xdebugclient"))
+                           "php" "\\.php$"))
 
 (defun xdebug-reset ()
   "Xdebug cleanup - remove debugger's internal buffers (frame,
