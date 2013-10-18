@@ -55,11 +55,11 @@ realgud-loc-pat struct")
 
 ;; Regular expression that describes a "breakpoint set" line.
 ;; For example:
-;;   Breakpoint set at line 12 in /var/www/index.php
+;;   Breakpoint 1 set at line 12 in /var/www/index.php
 (setf (gethash "brkpt-set" realgud-xdebug-pat-hash)
       (make-realgud-loc-pat
-       :regexp "\nBreakpoint set at line \\([0-9]+\\) in file \\(.+\\)\n"
-       ; :num 1
+       :regexp "\nBreakpoint \\([0-9]+\\) set at line \\([0-9]+\\) in \\(.+\\)\n"
+       :num 1
        :file-group 2
        :line-group 1))
 
