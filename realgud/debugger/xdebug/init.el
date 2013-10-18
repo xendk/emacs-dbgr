@@ -18,8 +18,7 @@ realgud-loc-pat struct")
 ;; Regular expression that describes a xdebug location generally shown
 ;; before a command prompt.
 ;; For example:
-;; -- (/tmp/linecache.rb:64)
-;; C> (/tmp/eval.rb:2)
+;; file:///var/www/index.php:10>
 (setf (gethash "loc" realgud-xdebug-pat-hash)
       (make-realgud-loc-pat
        :regexp "\nfile://\\([^:]+\\):\\([0-9]+\\)> "
@@ -28,7 +27,7 @@ realgud-loc-pat struct")
 
 ;; Regular expression that describes a xdebug command prompt
 ;; For example:
-;;   file:num>
+;;   file:///var/www/index.php:10>
 (setf (gethash "prompt" realgud-xdebug-pat-hash)
       (make-realgud-loc-pat
        :regexp "^.+> "
