@@ -60,8 +60,8 @@ realgud-loc-pat struct")
       (make-realgud-loc-pat
        :regexp "\nBreakpoint \\([0-9]+\\) set at line \\([0-9]+\\) in \\(.+\\)\n"
        :num 1
-       :file-group 2
-       :line-group 1))
+       :file-group 3
+       :line-group 2))
 
 ;; Regular expression that describes a debugger "delete" (breakpoint) response.
 ;; For example:
